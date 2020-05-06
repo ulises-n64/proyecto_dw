@@ -4,15 +4,19 @@ header{
     width:100% ;
     height: 100px;
     position: absolute;
+    left: 0px;
+    top: 0px;
 }
 nav{
     background-color: blue;/* De hecho por favor pon colores
                              mas bonitos, tienes completa libertad*/
     width:100% ;
-    height: 30px;
+    height: 30px;       /*en los altos de cada seccion dependera de lo que contenga 
+                        aqui solo use altos provicionales para dar el formato*/
     position: absolute;
 
     top:100px;
+    left: 0px;
 
 }
 .cuerpo{
@@ -20,12 +24,13 @@ nav{
     width: 100%;
     top: 140px;
     position: absolute;
+    left: 0px;
 }
 .sec1{
     background-color: blueviolet;
-    width:80% ; /* Siempre hay que usar porcentajes en los tamaños 
+    width:80% ; /* Siempre hay que usar porcentajes en los tamaños de ancho
                     para que no importe el tamaño de la computadora
-                    o de la ventana siempre se guarden las proporciones */
+                    o de la ventana, siempre se guarden las proporciones */
     
     display: inline-block;
     height: 400px;
@@ -44,7 +49,7 @@ aside{
 .art1{
     background-color: brown;
     width:98% ; /*Los porcentajes dependen del contenedor padre entonces
-                    como sec1 tiene tamaño 80% art1 y 2 son el 100% de 80%*/
+                    como sec1 tiene tamaño 80% art1 y 2 son el 98% de 80%*/
     position: absolute;
     margin: 1%;
     height: 160px;
@@ -64,4 +69,5 @@ footer{
     width:100% ;
     position: absolute;
     top:550px;
+    left: 0px;
 }
