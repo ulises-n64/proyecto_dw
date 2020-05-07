@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header{
+    position: relative;
+    margin: auto;
+    /*margin: 0 0; left top*/
+    width: 1000px;
+    height: 52px;
+    background:rgba(230, 222, 222, 0.856);
+    border-bottom: 2px solid black;
+}
+
+#logo{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    text-align:center;
+    line-height: 30px;
+    position: absolute;
+    /*top o bottom: 0;
+    left o right: 0; solo puede haber uno de los dos*/
+    top: 11px;
+    left: 30px;
+    width: 150px;
+    height: 30px;
+    /*background: #ccc;*/
+}
+#texto{
+    position: absolute;
+    /*top o bottom: 0;
+    left o right: 0; solo puede haber uno de los dos*/
+    top: 11px;
+    left: 425px;
+    width: 150px;
+    height: 20px;
+    background: #ccc;
+
+}
+.redes{
+    position: absolute;
+    /*top o bottom: 0;
+    left o right: 0; solo puede haber uno de los dos*/
+    top: 11px;
+    right: 32px;
+    width: 32px;
+    height: 32px;
+    background: #ccc;
+    border-radius:100%;
+}
+#icono1{
+    top: 11px;
+    right: 120px;
+}
+#icono2{
+    top: 11px;
+    right: 71px;
+}
+#icono3{
+    top: 11px;
+    right: 19px;
+}
+nav{
+    /*margin:
+    auto
+     0 0
+     vertical horizontal
+     20px auto
+     top right bottom left 
+     20px 30px 40px 50px
+     */
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+    height: 120px;
+    background: #aaa;
+}
+.botones{
+    position: absolute;
+    top: 30px;
+    right: 30px;   
+    width: 50px;
+    height: 50px;
+    margin: 0px 2px;
+    background: #333;
+    border-radius:100%;
+}
+#hist1{
+    top: 42px;
+    left: 10px;
+}
+#hist2{
+    top: 42px;
+    left: 67px;
+}
+#hist3{
+    top: 42px;
+    left: 124px;
+}
+#hist4{
+    top: 42px;
+    left: 181px;
+}
+#hist5{
+    top: 42px;
+    left: 238px;
+}
+#hist6{
+    top: 42px;
+    left: 295px;
+}
+#hist7{
+    top: 42px;
+    left: 352px;
+}
+#hist8{
+    top: 42px;
+    left: 409px;
+}
+#hist9{
+    top: 42px;
+    left: 466px;
+}
+#hist10{
+    top: 42px;
+    left: 523px;
+}
+#hist11{
+    top: 42px;
+    left: 580px;
+}
+#hist12{
+    top: 42px;
+    left: 637px;
+}
+#hist13{
+    top: 42px;
+    left: 694px;
+}
+#hist14{
+    top: 42px;
+    left: 751px;
+}
+#hist15{
+    top: 42px;
+    left: 808px;
+}
+#hist16{
+    top: 42px;
+    left: 865px;
+}
+#hist17{
+    top: 42px;
+    left: 922px;
+}
+
+section{
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+    height: 453px;
+    background: #888;
+}
+aside#izq{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 453px;
+    background: #aaa;
+}
+article{
+    position: absolute;
+    left: 200px;
+    top: 0;
+    width: 600px;
+    height: 453px;
+    background: #888;
+}
+aside#der{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 453px;
+    background: #aaa;
+}
+
+footer{
+    position: relative;
+    margin:  auto;
+    width: 1000px;
+    height: 70px;
+    background: #888;
+}
