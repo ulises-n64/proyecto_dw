@@ -42,6 +42,8 @@ INSTALLED_APPS = [
 
     #apps ulises (apps creadas por mi )
     'posts',
+    'users',
+    
 ]
 
 MIDDLEWARE = [
