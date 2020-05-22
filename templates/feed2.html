@@ -1,14 +1,16 @@
 <!doctype html>   
 <html>  <!--etiqueta que encierra todo el documento HTML-->
 
+
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="codigo.js" language="javascript" type="text/javascript"></script>
-    <LINK REL=StyleSheet HREF="sty.css" TYPE="text/css" MEDIA=screen>
+    <script src="../static/js/codigo.js" language="javascript" type="text/javascript"></script>
+    <LINK REL=StyleSheet HREF="../static/css/styles.css" TYPE="text/css" MEDIA=screen>
     <title>Desarrollo web</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    
+
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
 </head>
 <body>
@@ -33,7 +35,10 @@
         
 
     </header>
+
+
 <!--Barra de navegacion-->
+
     <nav>
         <ul>
             <li id="hist1" class="botones"></li>
@@ -57,53 +62,52 @@
     </nav>
 
     <!--Section-->
-    <section class="contenido">
+    <section>
+
+        <section class="contenido">
+            {%block content%}
+            {% for post in posts %}
+            <div class="card">
+                <div class="card_header">
+                    <div class="imagen_perfil">
+                        <img class="foto_perfil" src="{{ post.user.picture }}" alt="{{ post.user.name }}">    
+                    </div>
+                    <div class="info_publicacion">
+                        <div class="nombre">{{ post.user.name }}</div>
+                        <div class="localidad">{{ post.timestamp }} </div>
+                    </div>
     
-        <div class="card">
-            <div class="card_header">
-                <div class="imagen_perfil">
-
+                    <div class="opciones"><i class="fas fa-elipsis-h"></i></div>
                 </div>
-                <div class="info_publicacion">
-                    <div class="nombre">Ethel</div>
-                    <div class="localidad">Toluca </div>
+                <div class="post_imagen">
+                    <img class="foto_post" src="{{ post.photo }}" >
+                   
                 </div>
-
-                <div class="opciones"><i class="fas fa-elipsis-h"></i></div>
+                <div class="Reacciones">
+                    <a href=""><i class="far fa-heart"></i></a>
+                    <a href=""><i class="far fa-comment"></i></a>
+                    <a href=""><i class="far fa-share-square"></i></a>
+                    <a href=""><i class="far fa-bookmark"></i></a>
+                </div>
+                <div class="likes"> 
+                    <a > 200  me gusta </a>
+                </div>
+                <div class="Pie_foto">
+                    <a href=""><h2>{{ post.user.name }}</h2></a>
+                    <span><p> {{ post.titulo }}</p></span>
+                </div>
+                <div class="dia_publicacion">
+                    {{post.created_date | timesince}} ago 
+                </div>
             </div>
-            <div class="post_imagen">
-
-            </div>
-            <div class="Reacciones">
-                <a href=""><i class="far fa-heart"></i></a>
-                <a href=""><i class="far fa-comment"></i></a>
-                <a href=""><i class="far fa-share-square"></i></a>
-                <a href=""><i class="far fa-bookmark"></i></a>
-            </div>
-            <div class="likes"> 
-                <a > 200  me gusta </a>
-            </div>
-            <div class="Pie_foto">
-                <a href=""><h2>Ethel </h2></a>
-                <span><p> Es un buen dia</p></span>
-            </div>
-            <div class="dia_publicacion">
-                1 hora 
-            </div>
-        </div>
-
-        <aside id="izq"></aside>
-        <article></article>
-        <aside id="der"></aside>
-
-    </section>
-    <!--pie de pagina-->
-    <footer class="foother"> 
-            <p>
-               Este es el pie de pagina 
-            </p>
-        </footer>
-</body>
-
-
-</html>
+            {%endfor%}
+            {%endblock%}
+        </section>
+        <!--pie de pagina-->
+        <footer></footer>
+    </body>
+    
+    
+    </html>
+    
+    
