@@ -3,5 +3,6 @@ from django.shortcuts import render
 
 
 def home_page(request):
-    return render(request, 'users/INS.html')
+   return render(request, 'users/base.html')
+
 

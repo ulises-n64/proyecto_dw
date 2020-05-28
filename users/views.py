@@ -6,7 +6,8 @@ from django.contrib.auth import authenticate, login
 
 # Create your views here.
 def perfil_view(request):
-    return render(request, 'users/perfil.html')
+    return render(request, 'users/Pagina_perfil.html')
+    
 def registro_view(request):
     return render(request, 'users/registro.html')
 def login_view(request):
@@ -23,5 +24,7 @@ def login_view(request):
 
 
 
-    return render(request, 'users/inicio_sesion.html')
+  
+
+
 
