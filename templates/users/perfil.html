@@ -1,14 +1,17 @@
+{% load static %}
+
+
 <!doctype html>   
 <html>  <!--etiqueta que encierra todo el documento HTML-->
 
     <head>  
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel=StyleSheet type="text/css" href="C:\Users\Ethel\Documents\Desarrollo\Proyecto\styles.css">
+        <link rel=StyleSheet type="text/css" href="{% static 'css/styles.css'%}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="C:\Users\Ethel\Documents\Desarrollo\Proyecto\header.css"> 
-        <link rel="stylesheet" href="C:\Users\Ethel\Documents\Desarrollo\Proyecto\perfil.css"> 
+        <link rel="stylesheet" href="{% static 'css/header.css'%}"> 
+        <link rel="stylesheet" href="{% static 'css/perfil.css'%}"> 
         <title>Desarrollo web</title>   
     </head>
     <body>
@@ -48,7 +51,7 @@
                     <div class="perfil_info">
                         <div class="sub_perfil_info">
                             <div class="imagen_perfil2">
-                                <img src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\Instagram_Project\media\Ethel2.jpeg" alt="">
+                                <img src="{% static 'media/users/pictures/Ethel2.jpeg'%}" alt="">
                             </div>
                             <div class="username">
                                 <p class="txt-username">Ethel</p>
@@ -89,7 +92,7 @@
                     <section class="post_list">
                         <a class="post" href="">
                             <div class="post_imagen">
-                                <img src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\Instagram_Project\media\Ethel2.jpeg">
+                                <img src="{%static 'media/users/pictures/Ethel2'%}.jpeg">
                             </div>
                             <div class="overlay">
                                 <span class="icon-heart"><i class="far fa-heart"></i> 20</span>
@@ -98,7 +101,7 @@
                         </a>
                         <a class="post" href="">
                             <div class="post_imagen">
-                                <img src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\Instagram_Project\media\Ethel.jpeg">
+                                <img src="{% static 'media/users/pictures/Ethel.jpeg'%}">
                             </div>
                             <div class="overlay">  
                                 <span class="icon-heart"><i class="far fa-heart"></i> 20</span>
@@ -107,7 +110,7 @@
                         </a>
                         <a class="post" href="">
                             <div class="post_imagen">
-                                <img src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\Instagram_Project\media\Ethel1.jpeg">
+                                <img src="{% static 'media/users/pictures/Ethel1.jpeg'%}">
                             </div>
                             <div class="overlay"> 
                                 <span class="icon-heart"><i class="far fa-heart"></i> 20</span>
@@ -116,7 +119,7 @@
                         </a>
                         <a class="post" href="">
                             <div class="post_imagen">
-                                <img src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\Instagram_Project\media\Ethel1.jpeg">
+                                <img src="{% static 'media/users/pictures/Ethel1.jpeg'%}">
                             </div>
                             <div class="overlay"> 
                                 <span class="icon-heart"><i class="far fa-heart"></i> 20</span>
@@ -125,7 +128,7 @@
                         </a>
                         <a class="post" href="">
                             <div class="post_imagen">
-                                <img src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\Instagram_Project\media\Ethel2.jpeg">
+                                <img src="{% static 'media/users/pictures/Ethel2.jpeg'%}">
                             </div>
                             <div class="overlay">  
                                 <span class="icon-heart"><i class="far fa-heart"></i> 20</span>
@@ -139,7 +142,7 @@
 
 
         <div class="estorbo"></div>
-        <script src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\header.js"></script>
+        <script src="{% static 'js/header.js'%}"></script>
         <script>
             let btnconfig = document.querySelector('#btnconfig')
             let modal = document.querySelector('#modal')

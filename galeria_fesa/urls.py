@@ -20,10 +20,12 @@ from django.conf import settings
 from django.urls import path
 from galeria_fesa import views as local_views
 from posts import views as posts_views
+from users import views as users_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', local_views.home_page),
     path('posts/', posts_views.list_posts ),
+    path('perfil/', users_views.perfil_view ),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
