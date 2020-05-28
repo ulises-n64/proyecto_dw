@@ -1,16 +1,15 @@
 {% extends 'Pagina_perfil.html' %}
 {%block content%}
-
     <!--Parte de la informacion del perfil-->
             <div class="info_perfil">
                     <div class="perfil_info">
                         <div class="sub_perfil_info">
                             <div class="imagen_perfil2">
-                                <img src="  debe ir la imagen de perfil " alt="">
+                                <img src="{{post.picture}} " alt="">
 
                             </div>
                             <div class="username">
-                                <p class="txt-username">Debe ir el nombre de usuario </p>
+                                <p class="txt-username"> {{post.user}}</p>
                             </div>
                             <div class="edit_perfil">
                                 <a class="link_edit" href="">Editar Perfil</a>
@@ -35,7 +34,16 @@
                             <section class="info_nombre">
                                 <div>
                                     <h4 class="text_nombre">
-                                        <p>nombre completo del usuario </p> <!--margin-botton: 5px-->
+                                        <p>{{post.user}} </p> <!--margin-botton: 5px-->
+                                    </h4>
+                                    <h4 class="text_nombre">
+                                        <p>{{post.website}} </p> <!--margin-botton: 5px-->
+                                    </h4>
+                                    <h4 class="text_nombre">
+                                        <p>{{post.phone}} </p> <!--margin-botton: 5px-->
+                                    </h4>
+                                    <h4 class="text_nombre">
+                                        <p>{{post.biography}} </p> <!--margin-botton: 5px-->
                                     </h4>
                                 </div>
                             </section>

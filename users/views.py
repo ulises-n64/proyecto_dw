@@ -3,8 +3,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 
 
-
 # Create your views here.
+
+
 def perfil_view(request):
     return render(request, 'users/Pagina_perfil.html')
     
