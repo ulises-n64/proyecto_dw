@@ -27,5 +27,8 @@ urlpatterns = [
     path('', local_views.home_page),
     path('posts/', posts_views.list_posts ),
     path('perfil/', users_views.perfil_view ),
+    path('registro/', users_views.registro_view ),
+    path('login/', users_views.login_view ),
+    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
