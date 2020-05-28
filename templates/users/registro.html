@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>   
 <html>  <!--etiqueta que encierra todo el documento HTML-->
 
@@ -17,7 +18,7 @@
             <div class=" "> 
                 <form action="" class="Contenido_login">
                     <div style="padding: 0px 30px 26px 30px;">
-                        <img src="{% static 'media/users/picture/logo.png'%}" class="logo_ins">
+                        <img src="{% static 'media/users/pictures/logo.png'%}" class="logo_ins">
                         <h1 class="titulo">Registrate para ver fotos de tus amigos</h1>
                         <div >
                             <input class="entradas" type="text" placeholder="Email">
@@ -29,7 +30,7 @@
                     </div>
                 </form>
                 <div class="text_boton">
-                    <span>¿Tienes una cuenta?<a href="">Entrar</a></span>
+                    <span>¿Tienes una cuenta?<a href="http://localhost:8000/login/">Entrar</a></span>
                 </div>
             </div>
         </section>
