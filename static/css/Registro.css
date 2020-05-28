@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Contenido_b{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.logo_ins{
+    width: 175px;
+    margin: 10px auto;
+    display: block;
+}
+.Contenido_login{
+    width: 350px;
+    height: auto;
+    border: 1px solid rgba(0,0,0,0.17);
+    background: white;
+    padding: 26px 0;
+}
+.titulo{
+    font-size: 18px;
+    font-family: arial;
+    text-align: center;
+}
+ 
+.entradas{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 5px 0;
+    height: 36px;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.17);
+    background: #fafafa;
+    padding:  0 10px;
+    color:#0000007a;
+
+
+}
+
+.entradas:focus{
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.12);
+}
+
+.registro{
+    width: 280px;
+    margin: auto;
+}
+
+.boton{
+    background: #3897f0;
+    border: 1px solid #3897f0;
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600px;
+}
+
+.text_boton{
+    width: 350px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.17);
+    font-family: sans-serif;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.text_boton span a{
+    color:#3897f0;
+    text-decoration:none;
+    
+}
