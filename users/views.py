@@ -21,7 +21,9 @@ def login_view(request):
             login(request, user)
             return redirect('feed')
         else:
-            return render(request, 'users/login.html', {'error': 'Invalid username and password'})
+            return render(request, 'users/inicio_sesion.html', {'error': 'La contraseña o el usuario no son validos'})
+    
+    return render(request, 'users/inicio_sesion.html')
 
 
 
