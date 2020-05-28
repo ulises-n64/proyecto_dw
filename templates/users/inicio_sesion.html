@@ -13,16 +13,18 @@
         <title>Desarrollo web</title>   
     </head>
     <body>
+        
         <section class="Contenido_b">
             <div class=" "> 
-                <form action="" class="Contenido_login">
+                <form method="POST" action="{%url 'login' %}" class="Contenido_login">
+                    {%csrf_token %}
                     <div style="padding: 0px 30px 26px 30px;">
                         <img src="{% static 'media/users/pictures/logo.png'%}" class="logo_ins">
                      
                         <div >
-                            <input class="entradas" type="text" placeholder="Email">
-                            <input class="entradas" type="password" placeholder="Contraseña">
-                            <button class="boton">Iniciar Sesion</button>
+                            <input class="entradas" type="text" placeholder="Username" name="username">
+                            <input class="entradas" type="password" placeholder="password" name="password">
+                            <button type="submit" class="boton">Iniciar Sesion</button>
                         </div>
                     </div>
                 </form>
