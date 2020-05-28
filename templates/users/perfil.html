@@ -1,0 +1,160 @@
+<!doctype html>   
+<html>  <!--etiqueta que encierra todo el documento HTML-->
+
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel=StyleSheet type="text/css" href="C:\Users\Ethel\Documents\Desarrollo\Proyecto\styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="C:\Users\Ethel\Documents\Desarrollo\Proyecto\header.css"> 
+        <link rel="stylesheet" href="C:\Users\Ethel\Documents\Desarrollo\Proyecto\perfil.css"> 
+        <title>Desarrollo web</title>   
+    </head>
+    <body>
+
+        <div class="modal" id="modal">
+            <div class="sub-modal">
+                <h1 id="closemodal">cancelar</h1>
+            </div>
+        </div>
+        <!--Cabezote-->
+        <header class="header" id="header"> 
+            <div class="navegacion">
+                <div class="logo">
+                    <a class=" " ><i class="fab fa-instagram"></i></a>
+                    <a class="v1"></a>
+                    <a>Instagram</a>
+                </div>
+                <div class="Barra_busqueda">
+                    <input  type="text" placeholder="Buscar" value="" required>
+                </div>
+                <div class="Iconos">
+                    <a class="Home" ><i class="fas fa-home"></i></a>
+                    <a class="Explorar" ><i class="far fa-compass"></i></a>
+                    <a class="Likes" ><i class="far fa-heart"></i></a>
+                    <a class="Perfil"><i class="far fa-user"></i></a>
+                </div>
+            </div>
+            
+
+        </header>
+
+        <div class="estorbo"></div>
+
+        <section class="contenido2">
+    <!--Parte de la informacion del perfil-->
+            <div class="info_perfil">
+                    <div class="perfil_info">
+                        <div class="sub_perfil_info">
+                            <div class="imagen_perfil2">
+                                <img src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\Instagram_Project\media\Ethel2.jpeg" alt="">
+                            </div>
+                            <div class="username">
+                                <p class="txt-username">Ethel</p>
+                            </div>
+                            <div class="edit_perfil">
+                                <a class="link_edit" href="">Editar Perfil</a>
+                            </div>
+                             <div class="buttonconfig">
+                                  <span class="Configuracion" id="btnconfig"> <i class="fas fa-cog"></i></span>
+                                       <!--margin 0 10px -->
+                            </div>
+
+                            <section class="info_follows">
+                                <div>
+                                    <span>6</span> Publicaciones
+                                </div>
+                                <div>
+                                    <span>50</span> Seguidores
+                                </div>
+                                <div>
+                                    <span>30</span> Seguidos
+                                </div>
+                            </section>
+
+                            <section class="info_nombre">
+                                <div>
+                                    <h4 class="text_nombre">
+                                        <p>Ethel</p> <!--margin-botton: 5px-->
+                                    </h4>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin informacion del perfil -->
+                <!-- inicia publicaciones del perfil -->
+                <div class="publicaciones" styles="">
+                    <section class="post_list">
+                        <a class="post" href="">
+                            <div class="post_imagen">
+                                <img src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\Instagram_Project\media\Ethel2.jpeg">
+                            </div>
+                            <div class="overlay">
+                                <span class="icon-heart"><i class="far fa-heart"></i> 20</span>
+                                <span class="icon-bubble2"><i class="far fa-comment"></i> 20</span>
+                            </div>
+                        </a>
+                        <a class="post" href="">
+                            <div class="post_imagen">
+                                <img src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\Instagram_Project\media\Ethel.jpeg">
+                            </div>
+                            <div class="overlay">  
+                                <span class="icon-heart"><i class="far fa-heart"></i> 20</span>
+                                <span class="icon-bubble2"><i class="far fa-comment"></i> 20</span>
+                            </div>
+                        </a>
+                        <a class="post" href="">
+                            <div class="post_imagen">
+                                <img src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\Instagram_Project\media\Ethel1.jpeg">
+                            </div>
+                            <div class="overlay"> 
+                                <span class="icon-heart"><i class="far fa-heart"></i> 20</span>
+                                <span class="icon-bubble2"><i class="far fa-comment"></i> 20</span>
+                            </div>
+                        </a>
+                        <a class="post" href="">
+                            <div class="post_imagen">
+                                <img src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\Instagram_Project\media\Ethel1.jpeg">
+                            </div>
+                            <div class="overlay"> 
+                                <span class="icon-heart"><i class="far fa-heart"></i> 20</span>
+                                <span class="icon-bubble2"><i class="far fa-comment"></i> 20</span>
+                            </div>
+                        </a>
+                        <a class="post" href="">
+                            <div class="post_imagen">
+                                <img src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\Instagram_Project\media\Ethel2.jpeg">
+                            </div>
+                            <div class="overlay">  
+                                <span class="icon-heart"><i class="far fa-heart"></i> 20</span>
+                                <span class="icon-bubble2"><i class="far fa-comment"></i> 20</span>
+                            </div>
+                        </a>
+                    </section>
+                </div>  
+            </div>    
+        </section>
+
+
+        <div class="estorbo"></div>
+        <script src="C:\Users\Ethel\Documents\Desarrollo\Proyecto\header.js"></script>
+        <script>
+            let btnconfig = document.querySelector('#btnconfig')
+            let modal = document.querySelector('#modal')
+
+            btnconfig.addEventListener('click' , entrarmodal)
+
+            function entrarmodal(){
+                modal.classList.add('entrar-modal')
+            }
+
+            modal.addEventListener('click' , cerrarmodal)
+
+            function cerrarmodal(){
+                modal.classList.remove('entrar-modal')
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+{% load static %}
+<!doctype html>   
+<html>  <!--etiqueta que encierra todo el documento HTML-->
+
+
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/js/codigo.js" language="javascript" type="text/javascript"></script>
+    <LINK REL=StyleSheet HREF="../static/css/styles.css" TYPE="text/css" MEDIA=screen>
+    <title>Desarrollo web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+</head>
+<body>
+    <!--Cabezote-->
+    <header class="header">
+        <div class="navegacion">
+            <div class="logo">
+                <a class=" " ><i class="fab fa-instagram"></i></a>
+                <a class="v1"></a>
+                <a>Instagram</a>
+            </div>
+            <div class="Barra_busqueda">
+                <input  type="text" placeholder="Buscar" value="" required>
+            </div>
+            <div class="Iconos">
+                <a class="Home" ><i class="fas fa-home"></i></a>
+                <a class="Explorar" ><i class="far fa-compass"></i></a>
+                <a class="Likes" ><i class="far fa-heart"></i></a>
+                <a class="Perfil"><i class="far fa-user"></i></a>
+            </div>
+        </div>
+        
+
+    </header>
+    <body>
+
+        {% include "nav.html" %}
+    
+        <div class="container_dow_nav">
+            {% block container %}
+            {% endblock%}
+        </div>
+    
+    </body>
+    </html>

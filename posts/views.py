@@ -51,4 +51,4 @@ def list_posts(request):
 	# 	<figure><img src="{picture}"/></figure>
 	# 	""".format(**post))
 	# return HttpResponse('<br>'.join(content))
-	return render(request,'feed.html', {'posts':posts})
+	return render(request,'feed2.html', {'posts':posts})
