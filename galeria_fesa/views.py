@@ -3,6 +3,6 @@ from django.shortcuts import render
 
 
 def home_page(request):
-   return render(request, 'users/base.html')
+   return render(request, 'posts/post_list.html')
 
 
