@@ -18,8 +18,16 @@
             <div class=" "> 
                 <form method="POST" action="{%url 'login' %}" class="Contenido_login">
                     {%csrf_token %}
+                    
+            
+                
+                   
+            
                     <div style="padding: 0px 30px 26px 30px;">
                         <img src="{% static 'media/users/pictures/logo.png'%}" class="logo_ins">
+                        {% if error %}
+                        <p style="color: red;">{{ error }}</p>
+                        {% endif%}
                      
                         <div >
                             <input class="entradas" type="text" placeholder="Username" name="username">

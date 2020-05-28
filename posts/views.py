@@ -1,4 +1,5 @@
 #post_views
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from datetime import datetime
 # Create your views here.
@@ -40,7 +41,7 @@ posts = [
 		'photo': 'https://www.eluniverso.com/sites/default/files/styles/powgallery_1280/public/fotos/2020/03/218956_0.jpg?itok=3Wqd5uzp',
 	}
 ]
-
+@login_required
 def list_posts(request):
 	# """list existing posts"""
 	# content=[]
