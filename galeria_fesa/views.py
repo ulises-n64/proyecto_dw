@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 
 def home_page(request):
-    return render(request, 'INS.html')
+    return render(request, 'users/INS.html')
