@@ -5,13 +5,14 @@
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="codigo.js" language="javascript" type="text/javascript"></script>
-    <LINK REL=StyleSheet HREF="{% static 'css/styles.css'%}" TYPE="text/css" MEDIA=screen>
-    <title>Desarrollo web</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    
+    <link rel=StyleSheet type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel=StyleSheet type="text/css" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-</head>
+   <!--  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">-->
+    <title>Desarrollo web</title>
+    
+    </head>
 <body>
     <!--Cabezote-->
     <header class="header">
@@ -34,7 +35,7 @@
         
 
     </header>
-<!--Barra de navegacion-->
+<!--Barra de navegacion
     <nav>
         <ul>
             <li id="hist1" class="botones"></li>
@@ -55,49 +56,19 @@
             <li id="hist16" class="botones"></li>
             <li id="hist17" class="botones"></li>
         </ul>
-    </nav>
+    </nav>-->
 
-    <!--Section-->
-    <section class="contenido">
+
+   <!--Seccion para las publicaciones-->
+   <section class="contenido">
+    {%block content%}
+
+    {%endblock%}
+|   </section>
+
+
+
     
-        <div class="card">
-            <div class="card_header">
-                <div class="imagen_perfil">
-
-                </div>
-                <div class="info_publicacion">
-                    <div class="nombre">Ethel</div>
-                    <div class="localidad">Toluca </div>
-                </div>
-
-                <div class="opciones"><i class="fas fa-elipsis-h"></i></div>
-            </div>
-            <div class="post_imagen">
-
-            </div>
-            <div class="Reacciones">
-                <a href=""><i class="far fa-heart"></i></a>
-                <a href=""><i class="far fa-comment"></i></a>
-                <a href=""><i class="far fa-share-square"></i></a>
-                <a href=""><i class="far fa-bookmark"></i></a>
-            </div>
-            <div class="likes"> 
-                <a > 200  me gusta </a>
-            </div>
-            <div class="Pie_foto">
-                <a href=""><h2>Ethel </h2></a>
-                <span><p> Es un buen dia</p></span>
-            </div>
-            <div class="dia_publicacion">
-                1 hora 
-            </div>
-        </div>
-
-        <aside id="izq"></aside>
-        <article></article>
-        <aside id="der"></aside>
-
-    </section>
     <!--pie de pagina-->
     <footer class="foother"> 
             <p>
