@@ -16,16 +16,24 @@
     <body>
         <section class="Contenido_b">
             <div class=" "> 
-                <form action="" class="Contenido_login">
+                <form action="{% url 'registro'%}"  method="POST" class="Contenido_login">
+                    {%csrf_token %}
+                    
                     <div style="padding: 0px 30px 26px 30px;">
                         <img src="{% static 'media/users/pictures/logo.png'%}" class="logo_ins">
                         <h1 class="titulo">Registrate para ver fotos de tus amigos</h1>
                         <div >
-                            <input class="entradas" type="text" placeholder="Email">
-                            <input class="entradas" type="text" placeholder="Nombre Completo">
-                            <input class="entradas" type="text" placeholder="Nombre de Usuario">
-                            <input class="entradas" type="password" placeholder="Contraseña">
-                            <button class="boton">Registrarte</button>
+                            {% if error %}
+                            <p style="color: red;">{{ error }}</p>
+                            {% endif%}
+                     
+                            <input class="entradas" type="text" placeholder="Email" name="email" required="true">
+                            <input class="entradas" type="text" placeholder="Nombre" name="first_name" required="true">
+                            <input class="entradas" type="text" placeholder="Apellido" name="last_name" required="true">
+                            <input class="entradas" type="text" placeholder="Nombre de Usuario" name="username" required="true">
+                            <input class="entradas" type="password" placeholder="Contraseña" name="passwd" required="true">
+                            <input class="entradas" type="password" placeholder="Confirmar Contraseña" name="passwd_confirmation" required="true">
+                            <button type="submit" class="boton">Registrarte</button>
                         </div>
                     </div>
                 </form>

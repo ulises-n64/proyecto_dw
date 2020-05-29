@@ -24,11 +24,12 @@ from users import views as users_views
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
-    path('', local_views.home_page, name='home'),
+    path('', posts_views.list_posts, name='home'),
     path('posts/', posts_views.list_posts, name='feed' ),
     path('perfil/', users_views.perfil_view, name='perfil'),
     path('registro/', users_views.registro_view, name='registro'),
     path('login/', users_views.login_view, name='login' ),
+    path('logout/', users_views.logout_view, name='logout' ),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
