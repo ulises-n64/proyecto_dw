@@ -1,0 +1,33 @@
+.card{
+    background-color: #fff;
+    background-color: rgba(var(--d87,255,255,255),1);
+    border: 1px solid #dbdbdb;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius: 3px;
+    margin: 60px auto 0;
+    max-width: 935px;
+    overflow: hidden;
+    width: 100%;
+
+    
+}
+
+.contenido {
+    background: #fafafa;
+    padding-top: 120px;
+    width: 100%;
+    top: 80px;
+    border: #ccc;
+}
+
+.lado.derecho{
+    display: flex;
+    width: 236;
+    height: 809;
+}
+
+.lado_izquierdo{
+    display: flex;
+    width: 236;
+    height: 809;
+}

@@ -1,0 +1,179 @@
+{% load static %}
+<!doctype html>   
+<html>  <!--etiqueta que encierra todo el documento HTML-->
+
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=StyleSheet type="text/css" href="{% static 'css/editar.css' %}">
+    <link rel=StyleSheet type="text/css" href="{% static 'css/header.css' %}">
+    <script href="{% static 'js/header.js' %}"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+   <!--  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">-->
+    <title>Desarrollo web</title>
+    
+    </head>
+<body>
+    <!--Cabezote-->
+    <header class="header">
+        <div class="navegacion">
+            <div class="logo">
+                <a class=" " ><i class="fab fa-instagram"></i></a>
+                <a class="v1"></a>
+                <a>Instagram</a>
+            </div>
+            <div class="Barra_busqueda">
+                <input  type="text" placeholder="Buscar" value="" required>
+            </div>
+            <div class="Iconos">
+                <a class="Home" ><i class="fas fa-home"></i></a>
+                <a class="Explorar" ><i class="far fa-compass"></i></a>
+                <a class="Likes" ><i class="far fa-heart"></i></a>
+            </div>
+        </div>
+        
+
+    </header>
+
+   <!--Seccion para las publicaciones-->
+   <section class="contenido">
+        <div class="Card">
+            <ul class="lado derecho">
+                <li >
+                <a href="">Editar perfil</a> 
+                </li>
+                <li>
+                    <a href="">Cambiar contraseña</a> 
+                </li>
+
+            </ul>
+            <div class="lado_Izquierda">
+                <div class="formao_editar ">
+                    <div>
+                        <div>
+                            <h1 class="username"> nombre de usuario</h1>
+                            <button class="cambio" type="button"> Cambiar foto de perfil </button>
+                        </div>
+                    </div>
+                    <form class="formato">
+                        <div class="llenado">
+                            <div class="nom">
+                                <label class="text">
+                                    Nombre
+                                </label>
+                                <div class="entada">
+                                    <input type="text" value="AQUI VA EL NOMBRE">
+                                    <div class="info">info</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="llenado">
+                            <div class="nom">
+                                <label class="text">
+                                    Nombre de usuario
+                                </label>
+                                <div class="entada">
+                                    <input type="text" value="AQUI VA EL NOMBRE">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="llenado">
+                            <div class="nom">
+                                <label class="text">
+                                    sitio web
+                                </label>
+                                <div class="entada">
+                                    <input type="text" value="AQUI VA EL NOMBRE">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="llenado">
+                            <div class="nom">
+                                <label class="text">
+                                    Presentacion
+                                </label>
+                                <div class="entada">
+                                    <input type="text" value="AQUI VA EL NOMBRE">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="llenado">
+                            <div class="nom">
+                                <label class="text">
+                                </label>
+                                <div class="info_">
+                                    <h3>Informacion Personal</h3>
+                                    <p>
+                                        Proporciona tu información personal, incluso si la cuenta se usa para un negocio, una mascota, etc. Esta información no se incluirá en tu perfil público.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="llenado">
+                            <div class="nom">
+                                <label class="text">
+                                    correo electrónico
+                                </label>
+                                <div class="entada">
+                                    <input type="text" value="AQUI VA EL NOMBRE">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="llenado">
+                            <div class="nom">
+                                <label class="text">
+                                    Numero Telefonico
+                                </label>
+                                <div class="entada">
+                                    <input type="number" value="AQUI VA EL NOMBRE">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="llenado">
+                            <div class="nom">
+                                <label class="text">
+                                    Genero
+                                </label>
+                                <div class="entada">
+                                    <input type="text" value="AQUI VA EL NOMBRE">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="llenado">
+                            <div class="nom">
+                                <label class="text">
+                                </label>
+                                <div class="entada">
+                                    <button class="b2"type="button">
+                                        Enviar
+                                    </button>
+                                    <button class="b3" type="boton"> 
+                                        Inabilitar Temporalmente mi Cuenta
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+|   </section>
+
+
+
+    
+    <!--pie de pagina-->
+    <footer class="foother"> 
+            <p>
+               Este es el pie de pagina 
+            </p>
+        </footer>
+</body>
+
+
+</html>

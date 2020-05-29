@@ -1,0 +1,90 @@
+{% load static %}
+<!doctype html>   
+<html>  <!--etiqueta que encierra todo el documento HTML-->
+
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=StyleSheet type="text/css" href="{% static 'css/editar.css' %}">
+    <link rel=StyleSheet type="text/css" href="{% static 'css/header.css' %}">
+    <script href="{% static 'js/header.js' %}"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+   <!--  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">-->
+    <title>Desarrollo web</title>
+    
+    </head>
+<body>
+    <!--Cabezote-->
+    <header class="header">
+        <div class="navegacion">
+            <div class="logo">
+                <a class=" " ><i class="fab fa-instagram"></i></a>
+                <a class="v1"></a>
+                <a>Instagram</a>
+            </div>
+            <div class="Barra_busqueda">
+                <input  type="text" placeholder="Buscar" value="" required>
+            </div>
+            <div class="Iconos">
+                <a class="Home" ><i class="fas fa-home"></i></a>
+                <a class="Explorar" ><i class="far fa-compass"></i></a>
+                <a class="Likes" ><i class="far fa-heart"></i></a>
+            </div>
+        </div>
+        
+
+    </header>
+
+   <!--Seccion para las publicaciones-->
+   <section class="contenido">
+        <div class="Card">
+            <ul class="lado derecho">
+                <li >
+                <a href="">Editar perfil</a> 
+                </li>
+                <li>
+                    <a href="">Cambiar contraseña</a> 
+                </li>
+
+            </ul>
+            
+            <div class="lado_Izquierda">
+                <div class="formao_editar ">
+                    <div>
+                        <div>
+                            <h1 class="username"> nombre de usuario</h1>
+                        </div>
+                    </div>   
+
+                <div>
+                    <form action="">
+                        <div class="formato cambiar contraseña">
+                            <input class="entradas" type="password" placeholder="Contraseña Anterior" name="passwd" required="true">
+                            <input class="entradas" type="password" placeholder="Contraseña nueva" name="passwd" required="true">
+                            <input class="entradas" type="password" placeholder="Confirmar Contraseña" name="passwd_confirmation" required="true">
+                            <button type="submit" class="boton">Cambiar contraseña</button>
+                        </div>
+                    </form>
+                        <div class="text_boton">
+                            <a href="">¡Olvidaste tu contraseña?</a></span>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+|   </section>
+
+
+
+    
+    <!--pie de pagina-->
+    <footer class="foother"> 
+            <p>
+               Este es el pie de pagina 
+            </p>
+        </footer>
+</body>
+
+
+</html>
