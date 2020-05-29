@@ -25,17 +25,17 @@
             <div class="card">
                 <div class="card_header">
                     <div class="imagen_perfil">
-                        <img class="foto_perfil" src="{{ user.picture }}" alt="{{ user.username }}">    
+                        <img class="foto_perfil" src="{{ post.profile.picture.url}}" alt="{{ post.user.get_full_name }}">    
                     </div>
                     <div class="info_publicacion">
-                        <div class="nombre">{{ user.name }}</div>
+                        <div class="nombre">{{  post.user.get_full_name  }}</div>
                         <div class="localidad">{{ user.timestamp }} </div>
                     </div>
     
                     <div class="opciones"><i class="fas fa-elipsis-h"></i></div>
                 </div>
                 <div class="post_imagen">
-                    <img class="foto_post" src="{{ user.photo }}" >
+                    <img class="foto_post" src="{{ post.photo.url }}" alt="{{ post.title }}" >
                    
                 </div>
                 <div class="Reacciones">
@@ -48,8 +48,8 @@
                     <a > 200  me gusta </a>
                 </div>
                 <div class="Pie_foto">
-                    <a href=""><h2>{{ post.user.username}}</h2></a>
-                    <span><p> {{ posts.title }}</p></span>
+                    <a href=""><h2>{{ post.title}}</h2></a>
+                    <span><p></p></span>
                 </div>
                 <div class="dia_publicacion">
                     {{user.create| timesince}} ago 

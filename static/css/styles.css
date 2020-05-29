@@ -3,6 +3,9 @@
     padding: 0;
     list-style: none;
 }
+body{
+    background-color: red;
+}
 
 .contenido{
     background: #fafafa;
@@ -72,8 +75,8 @@
 }
 
 .post_imagen img{
-    width: 100%;
-    height: 614px;
+    width: 80%;
+    height: auto;
     height: auto;
 }
 
@@ -152,9 +155,9 @@ padding: 0px 16px;
 
 
 .foto_perfil{
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
 
 
 }

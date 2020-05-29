@@ -12,7 +12,7 @@ class Post(models.Model):
     perfil = models.ForeignKey('users.Perfil', on_delete=models.CASCADE)
 
     title = models.CharField(max_length=255)
-    photo = models.ImageField(upload_to='posts/photos')
+    photo = models.ImageField(upload_to='users/pictures')
 
     create = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
