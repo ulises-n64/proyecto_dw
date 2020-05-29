@@ -53,8 +53,8 @@ posts = [
 	}
 ]
 @login_required
-def list_posts(request):
 
+def list_posts(request):
 	return render(request,'posts/post_list.html')
 
 
@@ -66,7 +66,7 @@ def posts_create(request):
         form = PostForm(request.POST , request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('feed')
+            return redirect('feed2')
 
     else:
         form = PostForm()

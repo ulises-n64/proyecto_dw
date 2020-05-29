@@ -22,6 +22,7 @@ from galeria_fesa import views as local_views
 from posts import views as posts_views
 from users import views as users_views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('', posts_views.list_posts, name='home'),
@@ -32,6 +33,7 @@ urlpatterns = [
     path('logout/', users_views.logout_view, name='logout' ),
     path('posts/create', posts_views.posts_create , name='posts_crate'),
     path('me/perfil/', users_views.update_profile, name='update_profile'),
+    
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

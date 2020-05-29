@@ -13,8 +13,17 @@ from django.contrib.auth.models import User
 from users.models import Perfil
 
 
+
 # Create your views here.
 def perfil_view(request):
+    context={
+       'user': user ,
+        'website': website,
+        'biography': biography,
+        'number': phone_number,
+        'picture': 'picture',
+        'time':create,
+    }
     return render(request, 'users/perfil.html')
     
 def registro_view(request):

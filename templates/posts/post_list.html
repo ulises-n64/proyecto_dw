@@ -1,5 +1,5 @@
 {% extends 'users/base.html' %}
-{%block content%}
+{% block content %}
 {% for post in posts %}
         <div class="card">
             <div class="card_header">
@@ -14,9 +14,9 @@
                 <div class="opciones"><i class="fas fa-elipsis-h"></i></div>
             </div>
             <div class="post_imagen">
-                {%if post.imagen%}
-                <img src="{{post.imagen.url}}" alt=""> 
-            {%endif%}
+                {% if post.photo %}
+                <img src="{{post.photo.url}}" alt=""> 
+            {% endif %}
             </div>
             <div class="Reacciones">
                 <a href=""><i class="far fa-heart"></i></a>
@@ -28,13 +28,13 @@
                 <a > 200  me gusta </a>
             </div>
             <div class="Pie_foto">
-                <a href=""><h2>{{post.user}}</h2></a>
-                <span><p>{{post.caption}}</p></span>
+                <a href=""><h2>{{user.user}}</h2></a>
+                <span><p>{{user.title}}</p></span>
             </div>
             <div class="dia_publicacion">
-                {{post.Fecha_publicacion | timesince}}ago
+                {{user.create | timesince}}ago
             </div>
         </div>
 
-{% endfor %}
-{%endblock content%}
+    {% endfor %}
+{% endblock %}
