@@ -8,7 +8,7 @@
         <link rel=StyleSheet type="text/css" href="{% static 'css/perfil.css' %}">
 
 
-    <title>Desarrollo web</title>
+    <title>Feed</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
 
@@ -25,7 +25,9 @@
             <div class="card">
                 <div class="card_header">
                     <div class="imagen_perfil">
+                        <a href="{% url 'perfil' post.user.username %}">
                         <img class="foto_perfil" src="{{ post.perfil.picture.url}}" alt="{{ post.user.get_full_name }}">    
+                    </a>
                     </div>
                     <div class="info_publicacion">
                         <div class="nombre">{{  post.user.get_full_name  }}</div>

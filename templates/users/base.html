@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=StyleSheet type="text/css" href="{% static 'css/styles.css' %}">
     <link rel=StyleSheet type="text/css" href="{% static 'css/header.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'media/users/pictures/icono.svg'%}" />
 
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" crossorigin="anonymous" />
@@ -15,7 +16,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
    <!--  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">-->
-    <title>Desarrollo web</title>
+   {% block head_content %}
+   <P>hola hola </P>
+   {% endblock %}
     
     </head>
 <body>
@@ -23,9 +26,9 @@
     <header class="header">
         <div class="navegacion">
             <div class="logo">
-                <a class=" " ><i class="fab fa-instagram"></i></a>
+                <a  class=" " ><i class="fab fa-instagram"></i></a>
                 <a class="v1"></a>
-                <a>Instagram</a>
+                <a href="http://localhost:8000" >Instagram</a>
             </div>
             <div class="Barra_busqueda">
                 <input  type="text" placeholder="Buscar" value="" required>
@@ -34,7 +37,8 @@
                 <a class="Home" ><i class="fas fa-home"></i></a>
                 <a class="Explorar" ><i class="far fa-compass"></i></a>
                 <a class="Likes" ><i class="far fa-heart"></i></a>
-                <a href="http://localhost:8000/logout" class="Perfil" ><i class="far fa-user"></i></a>
+           
+                <a href="{% url 'perfil' request.user.username %}" class="Perfil" ><i class="far fa-user"></i></a>
                 <a href="http://localhost:8000/posts/create" class="Subir"><i class="fas fa-camera-retro"></i></a>
             </div>
         </div>

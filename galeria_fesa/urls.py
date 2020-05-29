@@ -27,13 +27,14 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('', posts_views.list_posts, name='home'),
     path('posts/', posts_views.list_posts, name='feed' ),
-    path('perfil/', users_views.perfil_view, name='perfil'),
+    
     path('registro/', users_views.registro_view, name='registro'),
     path('login/', users_views.login_view, name='login' ),
     path('logout/', users_views.logout_view, name='logout' ),
     path('posts/create', posts_views.posts_create , name='posts_create'),
     path('me/perfil/', users_views.update_profile, name='update_profile'),
     #path('editar/perfil/', users_views.editar_profile, name='editar_profile'),
+    path('<str:username>/', view=users_views.UserDetailView.as_view(), name='perfil'),
 
     
     

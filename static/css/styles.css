@@ -3,13 +3,11 @@
     padding: 0;
     list-style: none;
 }
-body{
-    background-color: red;
-}
+
 
 .contenido{
     background: #fafafa;
-    padding-top: 120px;
+    padding-top: 20px;
     width: 100%;
     top: 80px;
     border: #ccc;
@@ -36,7 +34,7 @@ body{
 
 .imagen_perfil{
     display: inline-block;
-    background: navy;
+    
     height: 30px;
     width: 30px;
     padding: 0;
@@ -74,7 +72,8 @@ body{
     margin: 4px; 
 }
 
-.post_imagen img{
+.post_imagen{
+    padding-top: 5px;
     width: 100%;
     height: auto;
     height: auto;
@@ -161,7 +160,15 @@ padding: 0px 16px;
 
 
 }
+.imagen_perfil_2{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+
+
+}
 .foto_post{
+    
     width: 100%;
     height: auto;
 }

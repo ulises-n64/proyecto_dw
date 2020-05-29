@@ -2,7 +2,9 @@
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-
+from django.urls import reverse
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import DetailView
 # Exception
 from django.db.utils import IntegrityError
 
@@ -13,19 +15,12 @@ from users.models import Perfil
 # Forms
 from users.forms import ProfileForm
 
+from posts.models import Post
+
 
 
 # Create your views here.
-def perfil_view(request):
-    context={
-       'user': user ,
-        'website': website,
-        'biography': biography,
-        'number': phone_number,
-        'picture': 'picture',
-        'time':create,
-    }
-    return render(request, 'users/perfil.html')
+
     
 def registro_view(request):
     if request.method == 'POST':
@@ -82,8 +77,8 @@ def update_profile(request):
             perfil.biography = data['biography']
             perfil.picture = data['picture']
             perfil.save()
-
-            return redirect('feed')
+            url= reverse('perfil', kwargs={'username':request.user.username})
+            return redirect(url)
 
     else:
         form = ProfileForm()
@@ -103,6 +98,24 @@ def editar_perfil(request):
     return render(request, 'users/cambiar_contrasena.html')
 
 
+      
+class UserDetailView(LoginRequiredMixin, DetailView):
+    """User detail view."""
+
+    template_name = 'users/perfil.html'
+    slug_field = 'username'
+    slug_url_kwarg = 'username'
+    queryset = User.objects.all()
+    context_object_name = 'user'
+    def get_context_data(self, **kwargs):
+        """Add user's posts to context."""
+        context = super().get_context_data(**kwargs)
+        user = self.get_object()
+        context['posts'] = Post.objects.filter(user=user).order_by('-create')
+        return context
+
+
+    
 
   
 

@@ -4,6 +4,7 @@
 
 
 {% block head_content %}
+<LINK REL=StyleSheet HREF="{%static 'css/styles.css'%}" TYPE="text/css" MEDIA=screen>
 <title>@{{ request.user.username }} | Update perfil</title>
 {% endblock %}
 
@@ -19,7 +20,7 @@
 
                 <div class="media">
                     {% if perfil.picture %}
-                        <img src="{{ perfil.picture.url }}" class="rounded-circle" height="50" />
+                        <img src="{{ perfil.picture.url }}" class="foto_perfil" height="50" />
                     {% else%}
                         <img src="{% static 'img/default-profile.png' %}" class="rounded-circle" height="50" />
                     {% endif %}
