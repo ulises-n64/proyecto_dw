@@ -1,3 +1,6 @@
+body{
+    background-color: red;
+}
 .card{
     background-color: #fff;
     background-color: rgba(var(--d87,255,255,255),1);
@@ -20,13 +23,13 @@
     border: #ccc;
 }
 
-.lado.derecho{
+.lado_derecho{
     display: flex;
     width: 236;
     height: 809;
 }
 
-.lado_izquierdo{
+.Lado_izquierdo{
     display: flex;
     width: 236;
     height: 809;
