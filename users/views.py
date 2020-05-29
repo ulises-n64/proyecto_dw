@@ -15,7 +15,7 @@ from users.models import Perfil
 
 # Create your views here.
 def perfil_view(request):
-    return render(request, 'users/Pagina_perfil.html')
+    return render(request, 'users/perfil.html')
     
 def registro_view(request):
     if request.method == 'POST':

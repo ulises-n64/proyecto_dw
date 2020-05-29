@@ -20,18 +20,5 @@ window.addEventListener('scroll', function(e){
 	}
 })
   
-            let btnconfig = document.querySelector('#btnconfig')
-            let modal = document.querySelector('#modal')
 
-            btnconfig.addEventListener('click' , entrarmodal)
-
-            function entrarmodal(){
-                modal.classList.add('entrar-modal')
-            }
-
-            modal.addEventListener('click' , cerrarmodal)
-
-            function cerrarmodal(){
-                modal.classList.remove('entrar-modal')
-            }
      

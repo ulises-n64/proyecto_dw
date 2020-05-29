@@ -5,7 +5,7 @@
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=StyleSheet type="text/css" href="{% static 'css/styles.css' %}">
+
     <link rel=StyleSheet type="text/css" href="{% static 'css/header.css' %}">
     <link rel=StyleSheet type="text/css" href="{% static 'css/perfil.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
@@ -36,31 +36,9 @@
         
 
     </header>
-<!--Barra de navegacion
-    <nav>
-        <ul>
-            <li id="hist1" class="botones"></li>
-            <li id="hist2" class="botones"></li>
-            <li id="hist3" class="botones"></li>
-            <li id="hist4"class="botones"></li>
-            <li id="hist5" class="botones"></li>
-            <li id="hist6" class="botones"></li>
-            <li id="hist7" class="botones"></li>
-            <li id="hist8" class="botones"></li>
-            <li id="hist9"class="botones"></li>
-            <li id="hist10" class="botones"></li>
-            <li id="hist11" class="botones"></li>
-            <li id="hist12" class="botones"></li>
-            <li id="hist13" class="botones"></li>
-            <li id="hist14"class="botones"></li>
-            <li id="hist15" class="botones"></li>
-            <li id="hist16" class="botones"></li>
-            <li id="hist17" class="botones"></li>
-        </ul>
-    </nav>-->
+<!--Barra de navegacion-->
+    <div class="estorbo"></div>
 
-
-   <!--Seccion para las publicaciones-->
    <section class="contenido2">
     {%block content%}
 
@@ -68,7 +46,24 @@
 |   </section>
 
 
+<script href="/static/js/header.js"></script>
+<script>
 
+let btnconfig = document.querySelector('#btnconfig')
+            let modal = document.querySelector('#modal')
+
+            btnconfig.addEventListener('click' , entrarmodal)
+
+            function entrarmodal(){
+                modal.classList.add('entrar-modal')
+            }
+
+            modal.addEventListener('click' , cerrarmodal)
+
+            function cerrarmodal(){
+                modal.classList.remove('entrar-modal')
+            }
+</script>
     
     <!--pie de pagina-->
     <footer class="foother"> 

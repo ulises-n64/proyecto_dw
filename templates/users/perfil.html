@@ -1,15 +1,16 @@
-{% extends 'Pagina_perfil.html' %}
+{% extends 'users/Pagina_perfil.html' %}
 {%block content%}
     <!--Parte de la informacion del perfil-->
             <div class="info_perfil">
                     <div class="perfil_info">
                         <div class="sub_perfil_info">
                             <div class="imagen_perfil2">
-                                <img src="{{post.picture}} " alt="">
-
+                                {%if user.picture%}
+                                <img src="{{user.picture.url}}" alt="">
+                                {%endif %}
                             </div>
                             <div class="username">
-                                <p class="txt-username"> {{post.user}}</p>
+                                <p class="txt-username"> {{user.username}} </p>
                             </div>
                             <div class="edit_perfil">
                                 <a class="link_edit" href="">Editar Perfil</a>
@@ -34,19 +35,16 @@
                             <section class="info_nombre">
                                 <div>
                                     <h4 class="text_nombre">
-                                        <p>{{post.user}} </p> <!--margin-botton: 5px-->
-                                    </h4>
-                                    <h4 class="text_nombre">
-                                        <p>{{post.website}} </p> <!--margin-botton: 5px-->
-                                    </h4>
-                                    <h4 class="text_nombre">
-                                        <p>{{post.phone}} </p> <!--margin-botton: 5px-->
-                                    </h4>
-                                    <h4 class="text_nombre">
-                                        <p>{{post.biography}} </p> <!--margin-botton: 5px-->
+                                        <p>{{user.username}} </p> <!--margin-botton: 5px-->
                                     </h4>
                                 </div>
+                                <div >
+                                    <h5 class="link-website">
+                                        <p>{{user.website}} </p> <!--margin-botton: 5px-->
+                                    </h5>
+                                </div>
                             </section>
+                            
                         </div>
                     </div>
                 </div>
