@@ -14,8 +14,17 @@ from users.models import Perfil
 from users.forms import ProfileForm
 
 
+
 # Create your views here.
 def perfil_view(request):
+    context={
+       'user': user ,
+        'website': website,
+        'biography': biography,
+        'number': phone_number,
+        'picture': 'picture',
+        'time':create,
+    }
     return render(request, 'users/perfil.html')
     
 def registro_view(request):

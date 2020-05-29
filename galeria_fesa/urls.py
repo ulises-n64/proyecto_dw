@@ -22,6 +22,7 @@ from galeria_fesa import views as local_views
 from posts import views as posts_views
 from users import views as users_views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('', posts_views.list_posts, name='home'),
@@ -34,6 +35,7 @@ urlpatterns = [
     path('me/perfil/', users_views.update_profile, name='update_profile'),
     #path('editar/perfil/', users_views.editar_profile, name='editar_profile'),
 
+    
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

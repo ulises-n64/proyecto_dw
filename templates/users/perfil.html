@@ -1,13 +1,13 @@
 {% extends 'users/Pagina_perfil.html' %}
-{%block content%}
+{% block content %}
     <!--Parte de la informacion del perfil-->
             <div class="info_perfil">
                     <div class="perfil_info">
                         <div class="sub_perfil_info">
                             <div class="imagen_perfil2">
-                                {%if user.picture%}
-                                <img src="{{user.picture.url}}" alt="">
-                                {%endif %}
+                                {% if user.picture %}
+                                <img src="{{user.picture}}" alt="">
+                                {% endif %}
                             </div>
                             <div class="username">
                                 <p class="txt-username"> {{user.username}} </p>
@@ -55,7 +55,7 @@
                     <section class="post_list">
                         <a class="post" href="">
                             <div class="post_imagen">
-                                <img src="{{post.imagen}}">
+                                <img src="{{post.photo}}">
 
                             </div>
                             <div class="overlay">
@@ -73,7 +73,7 @@
         <div class="estorbo"></div>
 
      
-   {%endblock content%}
+   {% endblock content %}
 
 
  

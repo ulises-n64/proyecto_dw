@@ -17,9 +17,15 @@ from posts.forms import PostForm
 from posts.models import Post
 
 @login_required
+<<<<<<< HEAD
 def list_posts(request):
 	posts = Post.objects.all().order_by('-create')
 	return render(request, 'posts/feed2.html', {'posts': posts})
+=======
+
+def list_posts(request):
+	return render(request,'posts/post_list.html')
+>>>>>>> 416cf15fe86b1887006b23f6ece33f2e3b183d0a
 
 
 
@@ -31,7 +37,7 @@ def posts_create(request):
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('feed')
+            return redirect('feed2')
 
     else:
         form = PostForm()

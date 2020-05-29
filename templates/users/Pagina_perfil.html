@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 <!doctype html>   
 <html>  <!--etiqueta que encierra todo el documento HTML-->
 
@@ -31,6 +31,7 @@
                 <a class="Explorar" ><i class="far fa-compass"></i></a>
                 <a class="Likes" ><i class="far fa-heart"></i></a>
                 <a class="Perfil"><i class="far fa-user"></i></a>
+                <a class="Subir"><i class="fas fa-camera-retro"></i></a>
             </div>
         </div>
         
@@ -39,11 +40,12 @@
 <!--Barra de navegacion-->
     <div class="estorbo"></div>
 
-   <section class="contenido2">
-    {%block content%}
+   <div class="contenido2">
+       
+    {% block content %}
 
-    {%endblock%}
-|   </section>
+    {% endblock content %}
+|   </div>
 
 
 <script href="/static/js/header.js"></script>
