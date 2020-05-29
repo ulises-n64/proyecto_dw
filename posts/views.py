@@ -21,7 +21,7 @@ from posts.models import Post
 def list_posts(request):
 	posts = Post.objects.all().order_by('-create')
 	#import pdb; pdb.set_trace()
-	return render(request, 'posts/list_post.html', {'posts': posts})
+	return render(request, 'posts/feed2.html', {'posts': posts})
 	
 
 

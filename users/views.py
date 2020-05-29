@@ -69,7 +69,7 @@ def logout_view(request):
     logout(request)
     return redirect('login')
 def update_profile(request):
-    """Update a user's perfil view."""
+    
     perfil = request.user.perfil
 
     if request.method == 'POST':
