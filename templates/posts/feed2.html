@@ -1,11 +1,7 @@
+{% extends "../users/base.html" %}
 {% load static %}
-<!doctype html>   
-<html>  <!--etiqueta que encierra todo el documento HTML-->
 
-<head>  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../static/js/header.js" language="javascript" type="text/javascript"></script>
+{% block head_content %}
     <LINK REL=StyleSheet HREF="{%static 'css/styles.css'%}" TYPE="text/css" MEDIA=screen>
         <link rel=StyleSheet type="text/css" href="{% static 'css/header.css' %}">
         <link rel=StyleSheet type="text/css" href="{% static 'css/perfil.css' %}">
@@ -14,60 +10,12 @@
 
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-</head>
-<body>
-    <!--Cabezote-->
-    <header class="header">
-        <div class="navegacion">
-            <div class="logo">
-                <a class=" " ><i class="fab fa-instagram"></i></a>
-                <a class="v1"></a>
-                <a>Instagram</a>
-            </div>
-            <div class="Barra_busqueda">
-                <input  type="text" placeholder="Buscar" value="" required>
-            </div>
-            <div class="Iconos">
-                <a class="Home" ><i class="fas fa-home"></i></a>
-                <a class="Explorar" ><i class="far fa-compass"></i></a>
-                <a class="Likes" ><i class="far fa-heart"></i></a>
-                <a href="{% url 'logout'%}" class="Perfil"><i class="far fa-user"></i></a>
-            </div>
-        </div>
-        
-
-    </header>
-
-
-<!--Barra de navegacion-->
-
-    <nav>
-        <ul>
-            <li id="hist1" class="botones"></li>
-            <li id="hist2" class="botones"></li>
-            <li id="hist3" class="botones"></li>
-            <li id="hist4"class="botones"></li>
-            <li id="hist5" class="botones"></li>
-            <li id="hist6" class="botones"></li>
-            <li id="hist7" class="botones"></li>
-            <li id="hist8" class="botones"></li>
-            <li id="hist9"class="botones"></li>
-            <li id="hist10" class="botones"></li>
-            <li id="hist11" class="botones"></li>
-            <li id="hist12" class="botones"></li>
-            <li id="hist13" class="botones"></li>
-            <li id="hist14"class="botones"></li>
-            <li id="hist15" class="botones"></li>
-            <li id="hist16" class="botones"></li>
-            <li id="hist17" class="botones"></li>
-        </ul>
-    </nav>
-
-    <!--Section-->
+    {% endblock %}
+    {%block content%}
     <section>
 
         <section class="contenido">
-            {%block content%}
+            
             {% for post in posts %}
             <div class="card">
                 <div class="card_header">
@@ -104,12 +52,5 @@
             </div>
             {%endfor%}
             {%endblock%}
-        </section>
-        <!--pie de pagina-->
-        <footer></footer>
-    </body>
-    
-    
-    </html>
-    
+        
     

@@ -1,3 +1,4 @@
+
 #post_views
 
 from datetime import datetime
@@ -17,8 +18,8 @@ from posts.models import Post
 
 @login_required
 def list_posts(request):
-
-	return render(request,'posts/post_list.html')
+	posts = Post.objects.all().order_by('-create')
+	return render(request, 'posts/feed2.html', {'posts': posts})
 
 
 
