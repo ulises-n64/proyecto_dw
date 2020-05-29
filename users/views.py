@@ -58,6 +58,14 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
+def update_profile(request):
+    """Update a user's profile view."""
+    return render(request, 'users/update_profile.html',
+    context={
+        'Perfil' : Perfil,
+        'user' : request.user
+    }
+    )
 
 
 

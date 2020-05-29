@@ -1,0 +1,70 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block head_content %}
+<title>@{{ request.user.username }} | Update perfil</title>
+{% endblock %}
+
+{% block container %}
+
+<div class="container">
+
+    <div class="row justify-content-md-center">
+        <div class="col-6 p-4" id="perfil-box">
+
+            <form action="{% url 'update_perfil' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {% if form.errors %}
+                    <p>{{ form.errors }}</p>
+                {% endif %}
+
+                <div class="media">
+                    {% if perfil.picture %}
+                        <img src="{{ perfil.picture.url }}" class="foto_perfil" height="50" />
+                    {% else%}
+                        <img src="{% static '/media/users/pitures/Ethel.jpeg' %}" class="foto_perfil" height="50" />
+                    {% endif %}
+
+                    <div class="media-body">
+                        <h5 class="ml-4">@{{ user.username }} | {{ user.get_full_name }}</h5>
+                        <p class="ml-4"><input type="file" name="picture" required="true"></p>
+                    </div>
+                </div>
+
+                <hr><br>
+
+                <div class="form-group">
+                    <label>Website</label>
+                    <input
+                        class="form-control"
+                        type="url"
+                        name="website"
+                        placeholder="Website"
+                        value="{{ perfil.website }}"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label>Biography</label>
+                    <textarea class="form-control" name="biography">{{ perfil.biography }}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone number</label>
+                    <input
+                        class="form-control"
+                        type="text"
+                        name="phone_number"
+                        placeholder="Phone number"
+                        value="{{ perfil.phone_number }}"
+                    />
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block mt-5">Update info</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

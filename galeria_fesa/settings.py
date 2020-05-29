@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     #apps ulises (apps creadas por mi )
     'posts',
     'users',
+    'crispy_forms',
     
 ]
 
@@ -54,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'galeria_fesa.middleware.ProfileCompletionMiddleware',
 ]
 
 ROOT_URLCONF = 'galeria_fesa.urls'

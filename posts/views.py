@@ -1,8 +1,19 @@
 #post_views
-from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+
 from datetime import datetime
 # Create your views here.
+
+
+
+# Django
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+
+# Forms
+from posts.forms import PostForm
+
+# Models
+from posts.models import Post
 posts = [
 	{
 		'title': 'Primer campeonato',
@@ -45,5 +56,29 @@ posts = [
 def list_posts(request):
 
 	return render(request,'posts/post_list.html')
+
+
+
+@login_required
 def posts_create(request):
-	return render(request, 'posts/post_create.html')
+	
+    if request.method == 'POST':
+        form = PostForm(request.POST , request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('feed')
+
+    else:
+        form = PostForm()
+
+    return render(
+        request=request,
+        template_name='posts/post_create.html',
+        context={
+            'form': form,
+            'user': request.user,
+            'perfil': request.user.perfil
+        }
+    )
+	#
+	# return render(request, 'posts/post_create.html')
