@@ -43,13 +43,7 @@ posts = [
 ]
 @login_required
 def list_posts(request):
-	# """list existing posts"""
-	# content=[]
-	# for post in posts:
-	# 	content.append("""
-	# 	<p><strong>{name}</strong></p>
-	# 	<p><small>{user} - <i>{timestamp}</i></small></p>
-	# 	<figure><img src="{picture}"/></figure>
-	# 	""".format(**post))
-	# return HttpResponse('<br>'.join(content))
-	return render(request,'posts/feed2.html', {'posts':posts})
+
+	return render(request,'posts/post_list.html')
+def posts_create(request):
+	return render(request, 'posts/post_create.html')
