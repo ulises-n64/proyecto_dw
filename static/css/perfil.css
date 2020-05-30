@@ -25,12 +25,13 @@
 	border-radius: 15px;
 }
 
-.contenido2{
+.contenido{
     background: #fafafa;
     width: 100%;
     top: 80px;
-	border: #ccc;
-    
+    border: #ccc;
+    /*position: relative;
+    */
 }
 /*Formato para el perfil*/
 
@@ -112,6 +113,8 @@
 .buttonconfig{
 	grid-area: buttonconfig;
 }
+
+
 .buttonconfig{
     padding-left: 50px;
     font-size: 25px;
@@ -119,6 +122,9 @@
     margin: 0 10px;
  }
 
+ .far {
+     grid-area: buttonfar;
+ }
 .username{
 	display: flex;
 	
@@ -188,12 +194,10 @@
 /*Parte de imagenes publicadas en perfil*/
 
 .post_list{
-	
 	display: grid;
 	grid-template-columns: repeat(3, minmax(100px,290px));
 	grid-gap: 30px;
 	justify-content: center;
-	overflow: hidden;
 }
 
 
@@ -207,19 +211,16 @@
 	overflow: hidden;
 	position: relative;
 	width: auto;
-	height: 290px;
-	float: left;
+    height: 290px;
     
 }
 
 .post_imagen{
-	margin:0;
-	float: left;
+    margin:0;
 }
 .post_imagen img{
     width: 100%;
-	vertical-align: top;
-	float: left;
+    vertical-align: top;
 }
 
 .overlay{
@@ -234,8 +235,7 @@
 	align-items: center;
 	color: white;
 	display: none;
-	transition: all 0.5s;
-	float: left;
+    transition: all 0.5s;
  
 }
 
@@ -248,7 +248,6 @@
 
 .post:hover .overlay{
 	display: flex;
-	float: left;
 }
 
 
@@ -267,7 +266,6 @@
     
     .post_list{
 		grid-gap: 3px;
-		
     }
     
     .perfil_info{
@@ -305,15 +303,5 @@
 .foother{
     background: #ccc;
     text-align: center;
-	margin: 20px;
-	
-}
-.publicaciones{
-	overflow: hidden;
-
-
-}
-
-.container{
-	overflow: hidden;
+    margin: 20px;
 }

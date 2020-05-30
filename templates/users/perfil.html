@@ -6,100 +6,85 @@
 {% endblock %}
     <!--Parte de la informacion del perfil-->
     {% block content %}
-            <div class="info_perfil">
-                    <div class="perfil_info">
-                        <div class="sub_perfil_info">
-                            <div class="imagen_perfil2">
-                                {% if user.perfil.picture.url %}
-                                <img src="{{user.perfil.picture.url}}" alt="">
-                                {% endif %}
-                            </div>
-                            <div class="username">
-                                <p class="txt-username"> {{user.username}} </p>
-                            </div>
-                            {%if request.user == user %}
-                            <div class="edit_perfil">
-                                <a class="link_edit" href="http://localhost:8000/me/perfil/">Editar Perfil</a>
-                            </div>
-                            {%else%}
-                            <div class="Seguir">
-                                <a class="link_edit" href="http://localhost:8000/me/perfil/">Seguir</a>
-                            </div>
-                            {%endif%}
-
-                             <div class="buttonconfig" >
-                                  <a href="http://localhost:8000/logout/"  class="Configuracion"  id="btnconfig" > 
-                                      <i class="fas fa-cog"></i></a>
-                                       <!--margin 0 10px -->
-                            </div>
-
-
-                            <section class="info_follows">
-                                <div>
-                                    <span>6</span> Publicaciones
-                                </div>
-                                <div>
-                                    <span>50</span> Seguidores
-                                </div>
-                                <div>
-                                    <span>30</span> Seguidos
-                                </div>
-                            </section>
-
-                            <section class="info_nombre">
-                                <div>
-                                    <h4 class="text_nombre">
-                                        <p>{{user.perfil.biography}} </p> <!--margin-botton: 5px-->
-                                    </h4>
-                                </div>
-                                <div >
-                                    <h5 class="link-website">
-                                        <p>{{user.website}} </p> <!--margin-botton: 5px-->
-                                    </h5>
-                                    <h6>
-                                        <p>{{user.biography}} </p> 
-                                    </h6>
-                                </div>
-                            </section>
-                            
-                        </div>
-                    </div>
+    <div class="info_perfil">
+        <div class="perfil_info">
+            <div class="sub_perfil_info">
+                <div class="imagen_perfil2">
+                    <img src="{{user.perfil.picture.url}}" alt="">
                 </div>
-                <!-- fin informacion del perfil -->
-                <div class="container" id="user-posts">
-               
-                {% for post in posts %}
-                <!-- inicia publicaciones del perfil -->
-                <br></br>
-                <div class="publicaciones" >
-                    <section class="post_list">
-                        
-                        <a class="post" href="">
-                            
+                <div class="username">
+                    <p class="txt-username"> {{user.username}} </p>
+                </div>
+                {%if request.user == user %}
+                <div class="edit_perfil">
+                    <a class="link_edit" href="http://localhost:8000/me/perfil/">Editar Perfil</a>
+                </div>
+                {%else%}
+                <div class="Seguir">
+                    <a class="link_edit" href="http://localhost:8000/me/perfil/">Seguir</a>
+                </div>
+                {%endif%}
 
-                           
-                            <div class="post_imagen">
-                                <img src="{{post.photo.url}}">
-                                
+                 <div class="buttonconfig" >
+                      <a href="http://localhost:8000/logout/"  class="Configuracion"  id="btnconfig" > 
+                          <i class="fas fa-cog"></i></a>
+                           <!--margin 0 10px -->
+                </div>
 
-                            </div>
-                            <div class="overlay">
-                                <span class="icon-heart"><i class="far fa-heart"></i> 20</span>
-                                <span class="icon-bubble2"><i class="far fa-comment"></i> 20</span>
-                            </div>
-                        </a>
-                    
+                <section class="info_follows">
+                    <div>
+                        <span>6</span> Publicaciones
+                    </div>
+                    <div>
+                        <span>50</span> Seguidores
+                    </div>
+                    <div>
+                        <span>30</span> Seguidos
+                    </div>
+                </section>
 
-                    </section>
-                 
+                <section class="info_nombre">
+                    <div>
+                        <h4 class="text_nombre">
+                            <p>{{user.perfil.biography}} </p> <!--margin-botton: 5px-->
+                        </h4>
+                    </div>
+                    <div >
+                        <h5 class="link-website">
+                            <p>{{user.website}} </p> <!--margin-botton: 5px-->
+                        </h5>
+                        <h6>
+                            <p>{{user.biography}} </p> 
+                        </h6>
+                    </div>
+                </section>
             </div>
         </div>
+    </div>
+    <!-- fin informacion del perfil -->
+    <!-- inicia publicaciones del perfil -->
+    
+    <div class="publicaciones" styles="">
+        <section class="post_list">
+            {% for post in posts %} 
+            <a class="post" href="">
+                <div class="post_imagen">
+                    <img src="{{post.photo.url}}">
+                </div>
+                <div class="overlay">
+                    <span class="icon-heart"><i class="far fa-heart"></i> 20</span>
+                    <span class="icon-bubble2"><i class="far fa-comment"></i> 20</span>
+                </div>
+            </a>
+            {% endfor %}
         </section>
-   {% endfor %}
-</div>
-</div>
+        
+    </div>  
 
-        <div class="estorbo"></div>
+
+
+
+<div class="estorbo"></div>
 
      
    {% endblock content %}
